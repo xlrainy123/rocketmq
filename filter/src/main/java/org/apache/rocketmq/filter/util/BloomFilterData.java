@@ -55,19 +55,19 @@ public class BloomFilterData {
 
     @Override
     public boolean equals(final Object o) {
-        if (this == o)
+        if (this == o) {
             return true;
-        if (!(o instanceof BloomFilterData))
+        }
+        if (!(o instanceof BloomFilterData)) {
             return false;
+        }
 
         final BloomFilterData that = (BloomFilterData) o;
 
-        if (bitNum != that.bitNum)
+        if (bitNum != that.bitNum) {
             return false;
-        if (!Arrays.equals(bitPos, that.bitPos))
-            return false;
-
-        return true;
+        }
+        return Arrays.equals(bitPos, that.bitPos);
     }
 
     @Override
